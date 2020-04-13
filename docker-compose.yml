@@ -1,0 +1,18 @@
+version: '3'
+services:
+  datascience_test:
+    image: jupyter/base-notebook:latest
+    env_file:
+        - .env
+    volumes:
+      - ${LOCAL_WORKING_DIR}:/notebook
+      - ${LOCAL_SSL_CERTS}:/notebook/ssl
+    ports:
+      - ${PORT}:8888
+    command: "start-notebook.sh"
+    user: root
+    environment: 
+      ACCESS_TOKEN: sha1:187193706987:05442142fec8f90f4536d3198f0b13b67bc86191
+      PORT: 8888
+      LOCAL_WORKING_DIR: /usr/local/container
+      LOCAL_SSL_CERTS: /usr/local/container/ssl
