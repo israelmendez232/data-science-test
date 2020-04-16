@@ -1,30 +1,26 @@
-# Data Science Test 
-## Technical interview
-My response for a technical data science test and position.
+# Teste de Cientista de Dados
+As respostas para o teste técnico de cientista de Dados.
 
-- [ ] Main documentation(objectives, to do's)
-- [ ] Configure docker container for this code;
-- [ ] Modeling visualy the tables;
-- [ ] Phase 1: Exploratary Analysis
-- [ ] Phase 2: Entendimento das alavancas de receita
-- [ ] Phase 3: qual a recomendação que você daria para a Petlove melhorar seu faturamento?
-- [ ] Phase 4: Que outros dados, variáveis ou qualquer tipo de informação você adicionaria à este problema para tentar obter melhores resultados na explicação da receita da Petlove?
+## Como Usar o Teste?
+O teste foi construído em docker para que seja mais fácil de ser reproduzido. Primeiro passo é dar um git clone e entrar na pasta de container 
 
----
+```shell
+git clone https://github.com/israelmendez232/data-science-test.git
+cd data-science-test/container
+```
 
-## Docker Imagem
-To create the respective image and dependencies:
-`docker build --tag datascience_test_israel_mendes .`
+Agora, é rodar pelo essa linha de comando:
+```shel
+docker-compose up --tag datascience_test_israel_mendes .
+```
 
-Now, run the container from the image created:
-`docker run -it -p 8080:8888 datascience_test_israel_mendes`
+Após a criação da imagem, saiba que já está rodando o jupyter notebook. Você pode acessar o resultado do teste aqui: [localhost:8888/tree](localhost:8888/tree).
 
-Access the jupyter notebook on your browser here:
-`localhost:8888/tree` or [localhost:8888/tree](localhost:8888/tree)
-
-**OBSERVATION**: remember to add the original `dsci_test.sqlite` on the folder `container`. As this is a test, is important to preserve the orignal database far from this repository.
+**OBSERVAÇÃO**: tendo em vista que o banco sqlite original não foi colocado dentro do repositório Git para preservar o teste, é sugerido que você coloquem o arquivo `dsci_test.sqlite` na pasta `container` para que possam reproduzir o código de maneira mais fiel.
 
 ---
 
-Modeling Table: <br>
+## Modelagem Tabelas
+
+Segue uma modelagem simples das tabelas apresentadas no teste, para que seja mais fácil de entender a relação entre colunas e tabelas. O que ajudou a produzir insights melhores dentro das etapas propostas. A visão das tabelas: <br>
 ![Modelagem Tabela](modelagem_tabelas.png)
