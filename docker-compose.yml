@@ -2,12 +2,9 @@ version: '3'
 services:
   datascience_test:
     image: jupyter/scipy-notebook:latest
-    env_file:
-        - .env
     volumes:
-      - ${LOCAL_WORKING_DIR}:/notebook
-      - ${LOCAL_SSL_CERTS}:/notebook/ssl
+      - ./container:/home/jovyan/container
     ports:
-      - ${PORT}:8888
-    command: "start-notebook.sh"
+      - "8888:8888"
     user: root
+    command: /bin/sh -c "jupyter notebook --ip='*' --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''"

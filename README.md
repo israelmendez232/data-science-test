@@ -14,7 +14,7 @@ Agora, é rodar pelo essa linha de comando:
 docker-compose up --tag datascience_test_israel_mendes .
 ```
 
-Após a criação da imagem, saiba que já está rodando o jupyter notebook. Você pode acessar o resultado do teste aqui: [localhost:8888/tree](localhost:8888/tree).
+Após a criação da imagem, saiba que já está rodando o jupyter notebook. Você pode acessar o resultado do teste aqui: [http://localhost:8888/notebooks/container/main_script.ipynb](http://localhost:8888/notebooks/container/main_script.ipynb)
 
 **OBSERVAÇÃO**: tendo em vista que o banco sqlite original não foi colocado dentro do repositório Git para preservar o teste, é sugerido que você coloquem o arquivo `dsci_test.sqlite` na pasta `container` para que possam reproduzir o código de maneira mais fiel.
 
