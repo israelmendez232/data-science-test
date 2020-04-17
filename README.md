@@ -23,4 +23,4 @@ Após a criação da imagem, saiba que já está rodando o jupyter notebook. Voc
 ## Modelagem Tabelas
 
 Segue uma modelagem simples das tabelas apresentadas no teste, para que seja mais fácil de entender a relação entre colunas e tabelas. O que ajudou a produzir insights melhores dentro das etapas propostas. A visão das tabelas: <br>
-![Modelagem Tabela](modelagem_tabelas.png)
+![Modelagem Tabela](./initial_files/modelagem_tabelas.png)
